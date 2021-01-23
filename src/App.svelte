@@ -1,5 +1,24 @@
 <script>
     import PostCard from './PostCard.svelte'
+
+    let bdy = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut auctor dolor. Nullam ornare leo massa, et tempus felis viverra a. Duis aliquet suscipit elit vestibulum accumsan. Morbi condimentum consequat augue, a vehicula nunc mattis non. Quisque nec leo id neque facilisis convallis. Nam maximus sed sem id tincidunt. Aenean libero sem, tempus sed risus eget, tristique tincidunt mi. Nulla aliquet nibh et sollicitudin blandit."
+    let blogPosts = [
+        {
+            title: "Is it time to regulate Big Tech?",
+            body: bdy,
+            date: "3 Jan 2021"
+        },
+        {
+            title: "This is a wonderful title",
+            body: bdy,
+            date: "3 Jan 2021"
+        },
+        {
+            title: "Yet another title",
+            body: bdy,
+            date: "3 Feb 2021"
+        }
+    ]
 </script>
 
 <header>
@@ -23,10 +42,9 @@
 
 <main>
     <div class="container">
-        <PostCard/>
-        <PostCard/>
-        <PostCard/>
-        <PostCard/>
+       {#each blogPosts as post}
+            <PostCard title={post.title} body={post.body} date={post.date} />
+       {/each}
     </div>
 </main>
 

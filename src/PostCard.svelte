@@ -1,14 +1,16 @@
 <script>
-
+    export let title
+    export let body
+    export let date
 </script>
 
 <div class="contianer">
     <div class="left">
-        <p>3 Jan 2021</p>
-        <h2>Is it time to regulate big tech?</h2>
+        <p>{date}</p>
+        <h2>{title}</h2>
     </div>
     <div class="right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut auctor dolor. Nullam ornare leo massa, et tempus felis viverra a. Duis aliquet suscipit elit vestibulum accumsan. Morbi condimentum consequat augue, a vehicula nunc mattis non. Quisque nec leo id neque facilisis convallis. Nam maximus sed sem id tincidunt. Aenean libero sem, tempus sed risus eget, tristique tincidunt mi. Nulla aliquet nibh et sollicitudin blandit.</p>
+        <p>{body}</p>
         <div class="more-wrapper"><a href="body">more</a></div>
     </div>
 </div>
